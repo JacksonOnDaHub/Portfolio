@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.tab-buttons {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.tab-buttons button {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.tab-buttons button:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.tab-buttons button.active {
+    background: #ffdd88;
+    color: #000;
+}
+
+.doc-frame {
+    width: 100%;
+    height: 550px;
+    border: none;
+    border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="top-nav">
+<div class="nav-left">Jackson Z.</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="education.html">Education</a>
+<a href="skills.html">Skills</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">Projects</a>
+<a href="resume.html">Resume</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
+<header class="hero">
+<h1>Resume & Documents</h1>
+</header>
+
+<section class="card">
+
+<div class="resume-layout">
+
+<div class="resume-text">
+
+<h2>Professional Summary</h2>
+
+<p>
+I am a Computer Science student at the University of Wisconsin–Stout specializing in Cyber Security 
+with a minor in Mathematics. I have hands-on experience in programming, system design, and technical 
+projects including game development, web applications, and Arduino-based systems.
+</p>
+
+<p>
+I am actively seeking internship and entry-level opportunities where I can apply my technical skills, 
+continue learning, and contribute to real-world solutions.
+</p>
+
+</div>
+
+<div class="resume-image">
+<img src="pic (1).png" alt="Jackson Zimmerman" class="profile-img">
+</div>
+
+</div>
+
+<hr style="margin: 25px 0; opacity: 0.3;">
+
+<h2>Key Highlights</h2>
+<ul>
+<li>Developed multiple Java-based games including Pac-Man, Space Invaders, and Duck Hunt-style projects</li>
+<li>Built an Arduino-powered windmill generator integrating hardware and programming</li>
+<li>Created web applications including a Phasmophobia ghost detector and camping shopping site</li>
+<li>Strong teamwork and communication from customer-facing work experience</li>
+<li>Experience working in fast-paced, problem-solving environments</li>
+</ul>
+
+<hr style="margin: 25px 0; opacity: 0.3;">
+
+<h2>Documents</h2>
+
+<p>
+View my cover letter, resume, and professional references below. 
+Use the tabs to switch between documents or download them directly.
+</p>
+
+<div class="tab-buttons">
+<button id="coverBtn" class="active" onclick="showDoc('cover')">Cover Letter</button>
+<button id="resumeBtn" onclick="showDoc('resume')">Resume</button>
+<button id="refBtn" onclick="showDoc('ref')">References</button>
+</div>
+
+<div id="coverDoc">
+<iframe src="coverletter.pdf" class="doc-frame"></iframe>
+</div>
+
+<div id="resumeDoc" style="display:none;">
+<iframe src="resume.pdf" class="doc-frame"></iframe>
+</div>
+
+<div id="refDoc" style="display:none;">
+<iframe src="references.pdf" class="doc-frame"></iframe>
+</div>
+
+<br>
+
+<a class="button" href="coverletter.pdf">Download Cover Letter</a>
+<a class="button" href="resume.pdf">Download Resume</a>
+<a class="button" href="references.pdf">Download References</a>
+
+</section>
+
+<script>
+function showDoc(type) {
+    document.getElementById('coverDoc').style.display = type === 'cover' ? 'block' : 'none';
+    document.getElementById('resumeDoc').style.display = type === 'resume' ? 'block' : 'none';
+    document.getElementById('refDoc').style.display = type === 'ref' ? 'block' : 'none';
+
+    document.getElementById('coverBtn').classList.remove('active');
+    document.getElementById('resumeBtn').classList.remove('active');
+    document.getElementById('refBtn').classList.remove('active');
+
+    if(type === 'cover') document.getElementById('coverBtn').classList.add('active');
+    if(type === 'resume') document.getElementById('resumeBtn').classList.add('active');
+    if(type === 'ref') document.getElementById('refBtn').classList.add('active');
+}
+</script>
+
+</body>
+</html>
