@@ -126,7 +126,7 @@ a:hover {
 .profile-img {
     width: 100%;
     max-width: 370px;
-    max-height: 520px;
+    max-height: 400px;
     object-fit: contain;
     display: block;
     margin: auto;
