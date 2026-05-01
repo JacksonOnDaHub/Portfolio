@@ -391,3 +391,26 @@ a:hover {
         max-height: 280px;
     }
 }
+.home-hero {
+    width: 92%;
+    max-width: 1300px;
+    margin: 60px auto 30px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.home-hero-image {
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
+
+.home-hero-text {
+    order: 2;
+}
+
+.home-hero-image img {
+    max-height: 520px;
+}
